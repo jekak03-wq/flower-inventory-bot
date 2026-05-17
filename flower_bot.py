@@ -1,8 +1,11 @@
+from dotenv import load_dotenv
+import os
 import sqlite3
 import telebot
 from telebot import types
 from datetime import datetime
-TOKEN = "8269545478:AAGB38IvD4osgsqqW2djKfb_LeP3Xfq5x8U"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 
 bot = telebot.TeleBot(TOKEN)
